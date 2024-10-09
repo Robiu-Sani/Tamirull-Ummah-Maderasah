@@ -1,9 +1,14 @@
-import { Dropdown } from "flowbite-react";
+import { VscThreeBars } from "react-icons/vsc";
+import { FaAngleDown } from "react-icons/fa6";
 
 export default function Navbar() {
   return (
-    <div className="w-full py-3">
-      <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+    <div className="fixed w-full bg-green-600 z-50">
+      {" "}
+      {/* Add 'fixed' to make it stay at the top */}
+      <div className="container flex justify-around items-end gap-5 flex-col md:flex-row mx-auto py-4 px-2"></div>
+      {/* ----------- nav bar start from here ---------------  */}
+      <nav className="bg-white -mb-7 z-50 container mx-auto rounded-md shadow-md border border-gray-200 dark:bg-gray-900 dark:border-gray-700">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="#"
@@ -26,21 +31,7 @@ export default function Navbar() {
             aria-expanded="false"
           >
             <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
+            <VscThreeBars />
           </button>
           <div
             className="hidden w-full md:block md:w-auto"
@@ -62,26 +53,11 @@ export default function Navbar() {
                   data-dropdown-toggle="dropdownNavbar"
                   className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 >
-                  Dropdown{" "}
-                  <svg
-                    className="w-2.5 h-2.5 ms-2.5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
+                  Dropdown <FaAngleDown className="mt-1 ml-3" />
                 </button>
                 <div
                   id="dropdownNavbar"
-                  className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                  className="z-10 hidden !top-4 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                 >
                   <ul
                     className="py-2 text-sm text-gray-700 dark:text-gray-400"

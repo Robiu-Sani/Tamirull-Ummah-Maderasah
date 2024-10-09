@@ -1,12 +1,14 @@
 import { VscThreeBars } from "react-icons/vsc";
 import { FaAngleDown } from "react-icons/fa6";
+import logo from "../../images/logo.png";
 
 export default function Navbar() {
   return (
-    <div className="fixed w-full bg-green-600 z-50">
-      {" "}
+    <div className="absolute top-0 w-full bg-green-300 z-50">
       {/* Add 'fixed' to make it stay at the top */}
-      <div className="container flex justify-around items-end gap-5 flex-col md:flex-row mx-auto py-4 px-2"></div>
+      <div className="container  flex justify-around items-end gap-5 flex-col md:flex-row mx-auto py-4 px-2">
+        <img src={logo} className="w-[150px]" />
+      </div>
       {/* ----------- nav bar start from here ---------------  */}
       <nav className="bg-white -mb-7 z-50 container mx-auto rounded-md shadow-md border border-gray-200 dark:bg-gray-900 dark:border-gray-700">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -14,13 +16,9 @@ export default function Navbar() {
             href="#"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8"
-              alt="Flowbite Logo"
-            />
+            <img src={logo} className="h-8" alt="Flowbite Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              TUM
             </span>
           </a>
           <button

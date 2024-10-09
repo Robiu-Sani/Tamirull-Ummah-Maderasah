@@ -6,7 +6,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 
 export default function Banner() {
   return (
-    <div className="py-10">
+    <div className="mt-[220px] z-0">
       <Swiper
         modules={[Autoplay, Navigation]}
         autoplay={{

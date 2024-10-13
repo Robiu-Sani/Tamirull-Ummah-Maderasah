@@ -14,7 +14,7 @@ export default function AboutSection() {
             <div className="w-[80%] sm:w-[60%] p-5 absolute top-5 right-0 z-10 bg-white rounded-md shadow-lg border border-gray-200">
               <h2 className="text-xl font-bold mb-4">About Us</h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Ta'mirul Ummah Madrasah is a prestigious Islamic institution
+                Ta`mirul Ummah Madrasah is a prestigious Islamic institution
                 established in 2003, aimed at providing a high-quality education
                 in Islamic studies alongside contemporary knowledge. The
                 madrasah has been a pioneer in nurturing students with a

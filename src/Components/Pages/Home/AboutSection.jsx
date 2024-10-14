@@ -1,17 +1,20 @@
 import { AiTwotoneAlert } from "react-icons/ai";
+import { useNavigate } from "react-router-dom"; // Import useNavigate instead of useRoutes
 
 export default function AboutSection() {
+  const navigate = useNavigate(); // Initialize navigate
+
   return (
     <div className="w-full py-10">
       <div className="container mx-auto px-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         <div className="col-span-1 md:col-span-2">
-          <div className="w-full pb-10  relative">
+          <div className="w-full pb-10 relative">
             <img
               src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_Sr_Bp2FoH1BeeDy_tVMPPlOdcgFvNXtpcp_hyphenhyphenqDK30_fOHjy927q9fvsbh7vi_FCSHbwgHs_-v3_H8mhlywEdEdX6SF6LCgy9B-ayde4kyxLCdOsbVJzxQr6umbJpjaFdJnYhisz7-LK/s1600/DSC_0073-123456.jpg"
               alt="maderasah image"
               className="w-[100%] mb-4 md:w-1/2 rounded-md shadow-md"
             />
-            <div className="w-[100%]  md:w-[60%] p-5 static md:absolute top-5 right-0 z-10 bg-white rounded-md shadow-lg border border-gray-200">
+            <div className="w-[100%] md:w-[60%] p-5 static md:absolute top-5 right-0 z-10 bg-white rounded-md shadow-lg border border-gray-200">
               <h2 className="text-xl font-bold mb-4">About Us</h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Ta`mirul Ummah Madrasah is a prestigious Islamic institution
@@ -36,6 +39,7 @@ export default function AboutSection() {
             {/* Notice items */}
             {["Notice 1", "Notice 2", "Notice 3"].map((notice, index) => (
               <div
+                onClick={() => navigate(`/notice/1`)} // Use navigate for route navigation
                 key={index}
                 className="w-full cursor-pointer rounded-md shadow-md hover:bg-gray-100 transition-all"
               >
@@ -53,7 +57,10 @@ export default function AboutSection() {
             ))}
 
             {/* See All Notices button */}
-            <div className="w-full cursor-pointer p-3 text-center text-blue-500 font-bold bg-blue-50 hover:bg-blue-100 transition-all rounded-md shadow-md">
+            <div
+              onClick={() => navigate("/notices")} // Add navigation to the 'See All Notices' button
+              className="w-full cursor-pointer p-3 text-center text-blue-500 font-bold bg-blue-50 hover:bg-blue-100 transition-all rounded-md shadow-md"
+            >
               See All Notices
             </div>
           </div>
